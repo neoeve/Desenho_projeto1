@@ -90,7 +90,6 @@ ax.legend()
 plt.show()
 
 #plot para lista, valores presentes
-x = [i for i in range(1000, tamanho_maximo, 1000)]
 y1 = []
 y2 = []
 y3 = []
@@ -116,7 +115,6 @@ ax.legend()
 plt.show()
 
 #plot para array, valores não presentes
-x = [i for i in range(1000, tamanho_maximo, 1000)]
 y1 = []
 y2 = []
 y3 = []
@@ -142,7 +140,6 @@ ax.legend()
 plt.show()
 
 #plot para array, valores presentes
-x = [i for i in range(1000, tamanho_maximo, 1000)]
 y1 = []
 y2 = []
 y3 = []
