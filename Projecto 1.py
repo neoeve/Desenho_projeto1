@@ -163,3 +163,106 @@ ax.set_title("Array, valores presentes")
 ax.legend()
 
 plt.show()
+
+#Lista/array sequencial
+
+#plot para lista, valores não presentes
+x = [i for i in range(1000, tamanho_maximo, 1000)]
+y1 = []
+y2 = []
+y3 = []
+
+for i in range(1000, tamanho_maximo, 1000):
+    lista = list(range(i))
+    non_max_value = max(lista) + 1
+    tempos_lista = tempos(non_max_value, lista)
+    y1.append(tempos_lista[0])
+    y2.append(tempos_lista[1])
+    y3.append(tempos_lista[2])
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, label="In")
+ax.plot(x, y2, label="Sequencial")
+ax.plot(x, y3, label="Binária")
+
+ax.set_xlabel('Tamanho lista')
+ax.set_ylabel('Tempos execução')
+ax.set_title("Lista sequencial, valores não presentes")
+ax.legend()
+
+plt.show()
+
+#plot para lista, valores presentes
+y1 = []
+y2 = []
+y3 = []
+
+for i in range(1000, tamanho_maximo, 1000):
+    lista = list(range(i))
+    random_value = random.choice(lista)
+    tempos_lista = tempos(random_value, lista)
+    y1.append(tempos_lista[0])
+    y2.append(tempos_lista[1])
+    y3.append(tempos_lista[2])
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, label="In")
+ax.plot(x, y2, label="Sequencial")
+ax.plot(x, y3, label="Binária")
+
+ax.set_xlabel('Tamanho lista')
+ax.set_ylabel('Tempos execução')
+ax.set_title("Lista sequencial, valores presentes")
+ax.legend()
+
+plt.show()
+
+#plot para array, valores não presentes
+y1 = []
+y2 = []
+y3 = []
+
+for i in range(1000, tamanho_maximo, 1000):
+    arrayzinho = numpy.arange(i)
+    non_max_value = max(arrayzinho) + 1
+    tempos_lista = tempos(non_max_value, arrayzinho)
+    y1.append(tempos_lista[0])
+    y2.append(tempos_lista[1])
+    y3.append(tempos_lista[2])
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, label="In")
+ax.plot(x, y2, label="Sequencial")
+ax.plot(x, y3, label="Binária")
+
+ax.set_xlabel('Tamanho array')
+ax.set_ylabel('Tempos execução')
+ax.set_title("Array sequencial, valores não presentes")
+ax.legend()
+
+plt.show()
+
+#plot para array, valores presentes
+y1 = []
+y2 = []
+y3 = []
+
+for i in range(1000, tamanho_maximo, 1000):
+    arrayzinho = numpy.arange(i)
+    random_value = random.choice(arrayzinho)
+    tempos_lista = tempos(random_value, arrayzinho)
+    y1.append(tempos_lista[0])
+    y2.append(tempos_lista[1])
+    y3.append(tempos_lista[2])
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, label="In")
+ax.plot(x, y2, label="Sequencial")
+ax.plot(x, y3, label="Binária")
+
+ax.set_xlabel('Tamanho Array')
+ax.set_ylabel('Tempos execução')
+ax.set_title("Array sequencial, valores presentes")
+ax.legend()
+
+plt.show()
